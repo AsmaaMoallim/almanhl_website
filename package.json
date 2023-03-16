@@ -1,9 +1,9 @@
 {
-  "name": "",
+  "name": "almanhl_website",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "sudo astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^2.0.18"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.8.0"
   }
 }

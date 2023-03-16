@@ -1,0 +1,89 @@
+<script>
+let navbar = document.getElementById('navbar');
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    let sticky = navbar.offsetTop;
+    if (window.pageYOffset >= (sticky+5)) {
+    navbar.classList.add("nav_bg")
+    } else { 
+    navbar.classList.remove("nav_bg");
+    }
+}
+</script>
+
+<div>
+    <nav class="navbar" id="navbar">
+    <!-- <img src={logo} class="logo" alt="logo" /> -->
+    <ul>
+    <li>
+        <a href="#">Logo</a>
+        </li>
+        <li>
+        <a href="#">About</a>
+        </li> 
+        <li>
+        <a href="#">text1</a>
+        </li>
+        <li>
+        <a href="#">text2</a>
+        </li>
+        <li>
+        <a href="#">contact</a>
+        </li>
+    </ul>
+    </nav>
+</div>
+
+<style>
+
+.navbar{
+    position: relative;
+    padding: 0 2rem;
+}
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
+    list-style-type: none;
+    margin: 0;
+}
+
+li{
+ display: block;
+}
+
+li:first-child{
+    margin-right:auto;
+}
+
+li:first-child a{
+    text-align: start;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav_bg{ 
+ background-color: blue;
+position: fixed;
+top: 0px;
+right: 0px;
+left: 0px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+right: 0;
+left: 0;
+}
+
+/* .sticky + .content {
+  padding-top: 60px;
+} */
+</style>
