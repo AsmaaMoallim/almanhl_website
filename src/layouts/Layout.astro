@@ -4,7 +4,6 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-import Navbar from "../components/Navbar.astro";
 ---
 
 <!DOCTYPE html>
@@ -17,7 +16,6 @@ import Navbar from "../components/Navbar.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Navbar />
 
     <slot />
   </body>
@@ -28,6 +26,7 @@ import Navbar from "../components/Navbar.astro";
     --fushina: #a33acb;
     --jewel: #4717f7;
     --stark: #e9dfe0;
+    --dark_purble:#221e34;
 /* 
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(
@@ -52,5 +51,8 @@ import Navbar from "../components/Navbar.astro";
   * {
     transition: 0.5s;
     box-sizing: border-box;
+    color: var(--stark) !important;
   }
+
 </style>
+ 
