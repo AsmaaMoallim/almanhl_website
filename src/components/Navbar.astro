@@ -1,89 +1,122 @@
+---
+const nav_item_1 = "about";
+const nav_item_2 = "text1";
+const nav_item_3 = "text2";
+const nav_item_4 = "contact";
+import NavCard from "./NavCard.astro";
+---
+
 <script>
-let navbar = document.getElementById('navbar');
-window.onscroll = function() {myFunction()};
-function myFunction() {
+  let navbar = document.getElementById("navbar");
+  window.onscroll = function () {
+    myFunction();
+  };
+  function myFunction() {
     let sticky = navbar.offsetTop;
-    if (window.pageYOffset >= (sticky+5)) {
-    navbar.classList.add("nav_bg")
-    } else { 
-    navbar.classList.remove("nav_bg");
+    if (window.pageYOffset >= sticky + 5) {
+      navbar.classList.add("nav_bg");
+    } else {
+      navbar.classList.remove("nav_bg");
     }
-}
+  }
 </script>
 
 <div>
-    <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar">
     <!-- <img src={logo} class="logo" alt="logo" /> -->
     <ul>
-    <li>
-        <a href="#">Logo</a>
-        </li>
-        <li>
-        <a href="#">About</a>
-        </li> 
-        <li>
-        <a href="#">text1</a>
-        </li>
-        <li>
-        <a href="#">text2</a>
-        </li>
-        <li>
-        <a href="#">contact</a>
-        </li>
+      <li>
+        <a href="#" id="">Logo</a>
+      </li>
+      <li id="about">
+        <a href="#">{nav_item_1}</a>
+      </li>
+      <div class="nav_view" id="about_view">
+        <NavCard />
+        <NavCard />
+        <NavCard />
+        <NavCard />
+        <NavCard />
+        <NavCard />
+      </div>
+      <li id="text1">
+        <a href="#">{nav_item_2}</a>
+      </li>
+      <div class="nav_view" id="text1_view"></div>
+      <li id="text2">
+        <a href="#">{nav_item_3}</a>
+      </li>
+      <div class="nav_view" id="text2_view"></div>
+      <li id="contact">
+        <a href="#">{nav_item_4}</a>
+      </li>
+      <div class="nav_view" id="contact_view"></div>
     </ul>
-    </nav>
+  </nav>
 </div>
 
 <style>
-
-.navbar{
-    position: relative;
+  .nav_view {
+    position: absolute;
+    background: pink;
+    width: 100vw;
+    height: 200px;
+    margin-top: 3rem;
+    left: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-gap: 10px;
+    padding: 1rem 10rem;
+    display: none;
+  }
+  #about:hover + #about_view {
+    display: grid;
+  }
+  #text1:hover + #text1_view {
+    display: grid;
+  }
+  #text2:hover + #text2_view {
+    display: grid;
+  }
+  #contact:hover + #contact_view {
+    display: grid;
+  }
+  #navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     padding: 0 2rem;
-}
-ul{
+  }
+  ul {
     padding: 0;
     display: flex;
     flex-direction: row;
     gap: 0 10px;
     list-style-type: none;
     margin: 0;
-}
+  }
 
-li{
- display: block;
-}
+  li {
+    display: block;
+  }
 
-li:first-child{
-    margin-right:auto;
-}
+  li:first-child {
+    margin-right: auto;
+  }
 
-li:first-child a{
+  li:first-child a {
     text-align: start;
-}
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+  }
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-.nav_bg{ 
- background-color: blue;
-position: fixed;
-top: 0px;
-right: 0px;
-left: 0px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-right: 0;
-left: 0;
-}
-
-/* .sticky + .content {
-  padding-top: 60px;
-} */
+  .nav_bg {
+    background-color: blue;
+  }
 </style>
