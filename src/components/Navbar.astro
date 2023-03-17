@@ -13,7 +13,7 @@ import NavCard from "./NavCard.astro";
   };
   function myFunction() {
     let sticky = navbar.offsetTop;
-    if (window.pageYOffset >= sticky + 5) {
+    if (window.pageYOffset >= sticky + 450) {
       navbar.classList.add("nav_bg");
     } else {
       navbar.classList.remove("nav_bg");
@@ -56,37 +56,12 @@ import NavCard from "./NavCard.astro";
 </div>
 
 <style>
-  .nav_view {
-    position: absolute;
-    background: var(--dark_purble);
-    width: 100vw;
-    height: 200px;
-    margin-top: 2.8rem;
-    left: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-    grid-gap: 10px;
-    padding: 1rem 10rem;
-    display: none;
-  }
-  #about:hover + #about_view {
-    display: grid;
-  }
-  #text1:hover + #text1_view {
-    display: grid;
-  }
-  #text2:hover + #text2_view {
-    display: grid;
-  }
-  #contact:hover + #contact_view {
-    display: grid;
-  }
   #navbar {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    padding: 0 2rem;
+    padding: 1rem 3rem 0.5rem;
   }
   ul {
     padding: 0;
@@ -99,6 +74,8 @@ import NavCard from "./NavCard.astro";
 
   li {
     display: block;
+    font-size: 1.5rem;
+    font-weight: 200;
   }
 
   li:first-child {
@@ -118,5 +95,35 @@ import NavCard from "./NavCard.astro";
 
   .nav_bg {
     background-color: var(--dark_purble);
+  }
+  .nav_view {
+    position: absolute;
+    background: var(--dark_purble);
+    width: 100vw;
+    height: 200px;
+    margin-top: 4rem;
+    left: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-gap: 10px;
+    padding: 1rem 10rem;
+    display: none;
+    /* visibility: hidden; */
+  }
+  #about:hover + #about_view {
+    display: grid;
+    /* visibility: visible; */
+  }
+  #text1:hover + #text1_view {
+    display: grid;
+    /* visibility: visible; */
+  }
+  #text2:hover + #text2_view {
+    display: grid;
+    /* visibility: visible; */
+  }
+  #contact:hover + #contact_view {
+    display: grid;
+    /* visibility: visible; */
   }
 </style>
