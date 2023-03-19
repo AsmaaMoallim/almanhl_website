@@ -1,0 +1,85 @@
+---
+export interface Props {
+  icon: string;
+  title: string;
+  content: string;
+  href?: string;
+  card_nav: string;
+}
+
+const { icon, title, content, href, card_nav } = Astro.props;
+---
+
+<div class="contactCard">
+  <div class="card_icon"><i class={`bi bi-${icon}-fill`}></i></div>
+  <div class="card_title"><h3>{title}</h3></div>
+  <div class="card_content">{content}</div>
+  <div class="card_nav"><a href={href}>{card_nav}</a></div>
+</div>
+
+<style>
+  .contactCard {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    animation: floatUp 0.8s linear forwards;
+    transform: translatey(20px);
+    opacity: 0;
+  }
+
+  .contactCard:nth-child(odd) {
+    background-color: var(--jewel);
+  }
+
+  .contactCard:nth-child(even) {
+    background-color: var(--jewel-darker);
+  }
+  .card_icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid white 2px;
+    border-radius: 100%;
+    font-size: larger;
+  }
+  .card_title h3 {
+    margin: 0%;
+  }
+  .card_content {
+    margin: 10px;
+  }
+
+  .contactCard .card_nav a {
+    font-weight: bolder;
+  }
+  .contactCard .card_nav:hover a {
+    color: var(--fushina) !important;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translatey(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatey(0px);
+      opacity: 1;
+    }
+  }
+
+  .contactCard:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .contactCard:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .contactCard:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+</style>
