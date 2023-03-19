@@ -1,0 +1,34 @@
+---
+export interface Props {
+  input_type: string;
+  required?: string;
+  placeholder: string;
+  id: string;
+  name: string;
+}
+
+const { input_type, required, placeholder, id, name } = Astro.props;
+---
+
+<input
+  type={input_type}
+  required={required}
+  placeholder={placeholder}
+  id={id}
+  class="form-control"
+  name={name}
+/>
+
+<style>
+  .form-control {
+    width: 100%;
+    height: 4rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--stark);
+    margin: 0.5rem;
+    padding: 1rem;
+    outline: none;
+    color: var(--void) !important; 
+  }
+</style>

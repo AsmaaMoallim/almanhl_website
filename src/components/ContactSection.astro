@@ -1,5 +1,6 @@
 ---
 import ContactCard from "./ContactCard.astro";
+import ContactForm from "./ContactForm.astro";
 ---
 
 <main class="contactUs">
@@ -27,11 +28,16 @@ import ContactCard from "./ContactCard.astro";
       card_nav="SEND A MESSAGE"
     />
   </div>
+  <ContactForm/>
 </main>
 
 <style>
   .contactUs {
+    display: flex;
+    margin: auto;
     text-align: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 10% 0;
   }
   .contactUs .contactUs_title {
@@ -51,6 +57,4 @@ import ContactCard from "./ContactCard.astro";
     justify-content: center;
     padding: 2rem;
   }
-  
-
 </style>

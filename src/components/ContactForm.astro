@@ -1,0 +1,98 @@
+---
+import FormInput from "./FormInput.astro";
+---
+
+<form method="post" name="enq" class="contactForm">
+  <div class="row">
+    <FormInput
+      input_type="text"
+      required="required"
+      placeholder="Enter Name *"
+      id="first-name"
+      name="name"
+    />
+    <FormInput
+      input_type="email"
+      required="required"
+      placeholder="Enter Email *"
+      id="email"
+      name="email"
+    />
+  </div>
+  <div class="row">
+    <FormInput
+      input_type="text"
+      required="required"
+      placeholder="Enter Subject"
+      id="subject"
+      name="subject"
+    />
+    <FormInput
+      input_type="text"
+      placeholder="Enter Phone No."
+      id="phone"
+      name="phone"
+    />
+  </div>
+  <div class="row">
+    <textarea
+      required="required"
+      placeholder="Message *"
+      id="description"
+      class="form-control"
+      name="message"
+      rows="3"
+      spellcheck="false"></textarea>
+  </div>
+  <div class="row">
+    <button
+      type="submit"
+      title="Submit Your Message!"
+      class="btn"
+      id="submitButton"
+      name="submit"
+      value="Submit">Submit <i class="bi bi-arrow-right"></i></button
+    >
+  </div>
+  <div class="row">
+    <div id="alert-msg" class="alert-msg text-center"></div>
+  </div>
+</form>
+<style>
+  .contactForm {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10.5rem;
+  }
+  .form-control {
+    width: 100%;
+    height: 8rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--stark);
+    margin: 0.5rem;
+    padding: 1rem;
+    outline: none;
+  }
+  .btn {
+    width: 100%;
+    height: 4rem;
+    border-radius: 10px;
+    border: none;
+    margin: 0.5rem;
+    padding: 1rem;
+    transition: all 0.5s ease-in;
+    background-image: linear-gradient(to right, #a33acb, #290a9a, #a33acb);
+    background-position: 100% 200%;
+    background-size: 200%;
+  }
+
+  .btn:hover {
+    background-position: 0 100%;
+  }
+</style>

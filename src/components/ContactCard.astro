@@ -10,11 +10,24 @@ export interface Props {
 const { icon, title, content, href, card_nav } = Astro.props;
 ---
 
+<!-- <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("contactCard__animation");
+        return;
+      }
+    });
+  });
+  observer.observe(document.querySelector(".contactCard"));
+</script> -->
 <div class="contactCard">
+  <!-- <div class="contactCard__animation"> -->
   <div class="card_icon"><i class={`bi bi-${icon}-fill`}></i></div>
   <div class="card_title"><h3>{title}</h3></div>
   <div class="card_content">{content}</div>
   <div class="card_nav"><a href={href}>{card_nav}</a></div>
+  <!-- </div> -->
 </div>
 
 <style>
@@ -26,11 +39,14 @@ const { icon, title, content, href, card_nav } = Astro.props;
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    animation: floatUp 0.8s linear forwards;
     transform: translatey(20px);
+    animation: floatUp 0.8s linear forwards;
     opacity: 0;
   }
 
+  /* .contactCard__animation {
+    animation: floatUp 0.8s linear forwards;
+  } */
   .contactCard:nth-child(odd) {
     background-color: var(--jewel);
   }
@@ -47,6 +63,7 @@ const { icon, title, content, href, card_nav } = Astro.props;
     border: solid white 2px;
     border-radius: 100%;
     font-size: larger;
+    margin: 0 auto 0.5rem;
   }
   .card_title h3 {
     margin: 0%;
