@@ -1,0 +1,53 @@
+---
+import TeamCard from "./TeamCard.astro";
+// teamSection
+---
+
+<main class="teamSection">
+  <h2 class="teamSection_title">Our Team</h2>
+  <div class="teamSection_content">
+    we are proud of our great team. He is one of the most motivated and
+    enthusiastic people we have, and is always ready and willing to help out
+    where needed.
+  </div>
+  <div class="teamSection_cards">
+    <TeamCard img="1" name="Derek Castro" job="Head Of Marketing" />
+    <TeamCard img="2" name="Jessica Bell" job="Head Of Sale" />
+    <TeamCard img="3" name="Alvaro Martin" job="Blockchain App Developer" />
+    <TeamCard img="4" name="Maria Willium" job="Blockchain App Developer" />
+    <TeamCard img="5" name="Tricia Diyana" job="Blockchain App Developer" />
+    <TeamCard img="6" name="Kent Pierce" job="Blockchain App Developer" />
+  </div>
+</main>
+
+<style>
+  .teamSection {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10% 0;
+  }
+  .teamSection .teamSection_title {
+    color: var(--jewel) !important;
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  .teamSection .teamSection_content {
+    color: var(--void) !important;
+    font-weight: 300;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .teamSection .teamSection_cards {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,0 +1,116 @@
+---
+export interface Props {
+  img: string;
+  name: string;
+  job: string;
+  href1?: string;
+  href2?: string;
+  href3?: string;
+}
+
+const { img, name, job, href1, href2, href3 } = Astro.props;
+---
+
+<div class="teamSectionCard">
+  <div class="card_img">
+    <img src={`/images/team${img}.jpeg`} /><div class="card_social">
+      <a href={href1}><i class="bi bi-facebook"></i></a>
+      <a href={href2}><i class="bi bi-instagram"></i></a>
+      <a href={href3}><i class="bi bi-twitter"></i></a>
+    </div>
+  </div>
+  <div class="card_name"><h3>{name}</h3></div>
+  <div class="card_job">{job}</div>
+</div>
+
+<style>
+  .teamSectionCard {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    transform: translatey(20px);
+    animation: floatUp 0.8s linear forwards;
+    opacity: 0;
+    padding: 0 1rem;
+  }
+  .card_img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: larger;
+    margin: 6rem 0.5rem;
+  }
+  .card_img img {
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
+    border: 15px solid white;
+  }
+  .card_name h3 {
+    margin: 0%;
+    color: var(--void) !important;
+  }
+  .card_job {
+    color: var(--void) !important;
+    opacity: 0.8;
+  }
+
+  .card_social {
+    position: absolute;
+    height: 51.5%;
+    width: 51.5%;
+    background-color: var(--jewel-transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 50%;
+    transform: scale(0);
+  }
+  .card_social .bi {
+    color: white !important;
+  }
+  .card_social .bi.bi:hover {
+    color: var(--void) !important;
+  }
+
+  .card_img:hover > .card_social {
+    border-radius: 1%;
+    transform: scale(1);
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translatey(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatey(0px);
+      opacity: 1;
+    }
+  }
+
+  .teamSectionCard:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .teamSectionCard:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .teamSectionCard:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .teamSectionCard:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .teamSectionCard:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .teamSectionCard:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+</style>
