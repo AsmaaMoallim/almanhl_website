@@ -1,0 +1,61 @@
+---
+import WhyChooseUstSectionCard from "./WhyChooseUstSectionCard.astro";
+// WhyChooseUstSection
+---
+
+<main class="WhyChooseUstSection">
+  <h2 class="WhyChooseUstSection_title">Why Choose Us?</h2>
+  <span class="WhyChooseUstSection_content">
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum. Perspiciatis unde omnis iste natus
+    error sit.
+  </span>
+  <div class="WhyChooseUstSection_cards">
+    <WhyChooseUstSectionCard
+      icon="1"
+      title="Fully Secured Data"
+      content="Cryptocash bitcoin ensures every block and transaction it accepts is a valid, increasing not only your security but also helping prevent miners and banks from taking control of Bitcoin."
+    />
+    <WhyChooseUstSectionCard
+      icon="2"
+      title="A Better User Interface"
+      content="Bitcoin wallet has features most other wallets don't have. But if you don't need them, you can use several other wallets on top of Bitcoin without losing Bitcoin Core's security and privacy benefits."
+    />
+    <WhyChooseUstSectionCard
+      icon="3"
+      title="Support The Network"
+      content="Bitcoin helps support other peers.This isn't as useful as helping to keep Bitcoin decentralized, but it's an easy way for broadband users to contribute to less well-connected users."
+    />
+  </div>
+</main>
+
+<style>
+  .WhyChooseUstSection {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10% 0;
+  }
+  .WhyChooseUstSection .WhyChooseUstSection_title {
+    color: var(--jewel) !important;
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  .WhyChooseUstSection .WhyChooseUstSection_content {
+    color: var(--void) !important;
+    font-weight: 300;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .WhyChooseUstSection .WhyChooseUstSection_cards {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+</style>
