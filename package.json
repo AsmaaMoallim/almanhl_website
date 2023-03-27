@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.18",
-    "bootstrap-icons": "^1.10.3"
+    "@astrojs/vue": "^2.1.0",
+    "astro": "^2.1.6",
+    "bootstrap-icons": "^1.10.3",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "prettier-plugin-astro": "^0.8.0"

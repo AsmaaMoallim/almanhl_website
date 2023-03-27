@@ -1,0 +1,38 @@
+---
+import FaqSections from "./faqSections.vue";
+---
+
+<main class="faqSection">
+  <h2 class="faqSection_title">Frequently Asked Questions</h2>
+  <div class="faqSection_content">
+    Frequently asked questions (FAQ) or Questions and Answers (Q&A), are listed
+    questions and answers, all supposed to be commonly asked in some context
+  </div>
+  <div class="faqSection_sections" id="app">
+    <FaqSections client:visible />
+  </div>
+</main>
+
+<style>
+  .faqSection {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5% 0;
+  }
+  .faqSection .faqSection_title {
+    color: var(--jewel) !important;
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  .faqSection .faqSection_content {
+    color: var(--void) !important;
+    font-weight: 300;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    max-width: 80%;
+    margin: auto;
+  }
+</style>
