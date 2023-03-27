@@ -11,6 +11,9 @@ import NavCard from "./NavCard.astro";
   window.onscroll = function () {
     myFunction();
   };
+  window.onload = function () {
+    myFunction();
+  };
   function myFunction() {
     let sticky = navbar.offsetTop;
     if (window.pageYOffset >= sticky + 450) {
