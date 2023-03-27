@@ -4,28 +4,34 @@ import WhyChooseUstSectionCard from "./WhyChooseUstSectionCard.astro";
 ---
 
 <main class="WhyChooseUstSection">
-  <h2 class="WhyChooseUstSection_title">Why Choose Us?</h2>
-  <span class="WhyChooseUstSection_content">
+  <h2 class="WhyChooseUstSection_title" data-aos="fade-up">Why Choose Us?</h2>
+  <span class="WhyChooseUstSection_content" data-aos="fade-up">
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
     deserunt mollit anim id est laborum. Perspiciatis unde omnis iste natus
     error sit.
   </span>
   <div class="WhyChooseUstSection_cards">
-    <WhyChooseUstSectionCard
-      icon="1"
-      title="Fully Secured Data"
-      content="Cryptocash bitcoin ensures every block and transaction it accepts is a valid, increasing not only your security but also helping prevent miners and banks from taking control of Bitcoin."
-    />
-    <WhyChooseUstSectionCard
-      icon="2"
-      title="A Better User Interface"
-      content="Bitcoin wallet has features most other wallets don't have. But if you don't need them, you can use several other wallets on top of Bitcoin without losing Bitcoin Core's security and privacy benefits."
-    />
-    <WhyChooseUstSectionCard
-      icon="3"
-      title="Support The Network"
-      content="Bitcoin helps support other peers.This isn't as useful as helping to keep Bitcoin decentralized, but it's an easy way for broadband users to contribute to less well-connected users."
-    />
+    <data-aos data-aos="fade-up" data-aos-delay="100">
+      <WhyChooseUstSectionCard
+        icon="1"
+        title="Fully Secured Data"
+        content="Cryptocash bitcoin ensures every block and transaction it accepts is a valid, increasing not only your security but also helping prevent miners and banks from taking control of Bitcoin."
+      />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="200">
+      <WhyChooseUstSectionCard
+        icon="2"
+        title="A Better User Interface"
+        content="Bitcoin wallet has features most other wallets don't have. But if you don't need them, you can use several other wallets on top of Bitcoin without losing Bitcoin Core's security and privacy benefits."
+      />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="300">
+      <WhyChooseUstSectionCard
+        icon="3"
+        title="Support The Network"
+        content="Bitcoin helps support other peers.This isn't as useful as helping to keep Bitcoin decentralized, but it's an easy way for broadband users to contribute to less well-connected users."
+      />
+    </data-aos>
   </div>
 </main>
 

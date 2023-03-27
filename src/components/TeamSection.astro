@@ -4,19 +4,31 @@ import TeamCard from "./TeamCard.astro";
 ---
 
 <main class="teamSection">
-  <h2 class="teamSection_title">Our Team</h2>
-  <div class="teamSection_content">
+  <h2 class="teamSection_title" data-aos="fade-up">Our Team</h2>
+  <div class="teamSection_content" data-aos="fade-up">
     we are proud of our great team. He is one of the most motivated and
     enthusiastic people we have, and is always ready and willing to help out
     where needed.
   </div>
   <div class="teamSection_cards">
-    <TeamCard img="1" name="Derek Castro" job="Head Of Marketing" />
-    <TeamCard img="2" name="Jessica Bell" job="Head Of Sale" />
-    <TeamCard img="3" name="Alvaro Martin" job="Blockchain App Developer" />
-    <TeamCard img="4" name="Maria Willium" job="Blockchain App Developer" />
-    <TeamCard img="5" name="Tricia Diyana" job="Blockchain App Developer" />
-    <TeamCard img="6" name="Kent Pierce" job="Blockchain App Developer" />
+    <data-aos data-aos="fade-up" data-aos-delay="100">
+      <TeamCard img="1" name="Derek Castro" job="Head Of Marketing" />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="200">
+      <TeamCard img="2" name="Jessica Bell" job="Head Of Sale" />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="300">
+      <TeamCard img="3" name="Alvaro Martin" job="Blockchain App Developer" />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="400">
+      <TeamCard img="4" name="Maria Willium" job="Blockchain App Developer" />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="500">
+      <TeamCard img="5" name="Tricia Diyana" job="Blockchain App Developer" />
+    </data-aos>
+    <data-aos data-aos="fade-up" data-aos-delay="600">
+      <TeamCard img="6" name="Kent Pierce" job="Blockchain App Developer" />
+    </data-aos>
   </div>
 </main>
 

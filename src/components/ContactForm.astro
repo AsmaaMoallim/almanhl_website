@@ -3,7 +3,7 @@ import FormInput from "./FormInput.astro";
 ---
 
 <form method="post" name="enq" class="contactForm">
-  <div class="row">
+  <div class="row" data-aos="fade-up">
     <FormInput
       input_type="text"
       required="required"
@@ -19,7 +19,7 @@ import FormInput from "./FormInput.astro";
       name="email"
     />
   </div>
-  <div class="row">
+  <div class="row" data-aos="fade-up">
     <FormInput
       input_type="text"
       required="required"
@@ -34,7 +34,7 @@ import FormInput from "./FormInput.astro";
       name="phone"
     />
   </div>
-  <div class="row">
+  <div class="row" data-aos="fade-up">
     <textarea
       required="required"
       placeholder="Message *"
@@ -44,7 +44,7 @@ import FormInput from "./FormInput.astro";
       rows="3"
       spellcheck="false"></textarea>
   </div>
-  <div class="row">
+  <div class="row" data-aos="fade-up">
     <button
       type="submit"
       title="Submit Your Message!"

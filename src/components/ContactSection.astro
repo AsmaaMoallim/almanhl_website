@@ -4,31 +4,37 @@ import ContactForm from "./ContactForm.astro";
 ---
 
 <main class="contactUs">
-  <h2 class="contactUs_title">Contact With Us</h2>
-  <span class="contactUs_content">
+  <h2 class="contactUs_title" data-aos="fade-up">Contact With Us</h2>
+  <span class="contactUs_content" data-aos="fade-up">
     For more information contact almanhl team
   </span>
   <div class="contactUs_cards">
-    <ContactCard
-      icon="geo-alt"
-      title="OUR ADDRESS"
-      content="4 Montgomery, NY 12549"
-      card_nav="VIEW MAP"
-    />
-    <ContactCard
-      icon="telephone"
-      title="OUR PHONE"
-      content="+23 0123 4567"
-      card_nav="CALL NOW"
-    />
-    <ContactCard
-      icon="envelope"
-      title="EMAIL-ID"
-      content="Yourmail@gmail.com"
-      card_nav="SEND A MESSAGE"
-    />
+    <div data-aos="fade-up" data-aos-delay="100" class="card_bg">
+      <ContactCard
+        icon="geo-alt"
+        title="OUR ADDRESS"
+        content="4 Montgomery, NY 12549"
+        card_nav="VIEW MAP"
+      />
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200" class="card_bg">
+      <ContactCard
+        icon="telephone"
+        title="OUR PHONE"
+        content="+23 0123 4567"
+        card_nav="CALL NOW"
+      />
+    </div>
+    <div data-aos="fade-up" data-aos-delay="300" class="card_bg">
+      <ContactCard
+        icon="envelope"
+        title="EMAIL-ID"
+        content="Yourmail@gmail.com"
+        card_nav="SEND A MESSAGE"
+      />
+    </div>
   </div>
-  <ContactForm/>
+  <ContactForm />
 </main>
 
 <style>
@@ -56,5 +62,12 @@ import ContactForm from "./ContactForm.astro";
     display: flex;
     justify-content: center;
     padding: 2rem;
+  }
+  .card_bg:nth-child(odd) {
+    background-color: var(--jewel);
+  }
+
+  .card_bg:nth-child(even) {
+    background-color: var(--jewel-darker);
   }
 </style>
