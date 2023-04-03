@@ -11,9 +11,9 @@ export interface Props {
 const { img, name, job, href1, href2, href3 } = Astro.props;
 ---
 
-<div class="teamSectionCard">
+<div class="teamSectionCard hidden">
   <div class="card_img">
-    <img src={`/images/team${img}.jpeg`} /><div class="card_social">
+    <img src={`images/team${img}.jpeg`} /><div class="card_social">
       <a href={href1}><i class="bi bi-facebook"></i></a>
       <a href={href2}><i class="bi bi-instagram"></i></a>
       <a href={href3}><i class="bi bi-twitter"></i></a>
@@ -33,7 +33,6 @@ const { img, name, job, href1, href2, href3 } = Astro.props;
     align-items: center;
     gap: 0.8rem;
     transform: translatey(20px);
-    animation: floatUp 0.8s linear forwards;
     opacity: 0;
     padding: 0 1rem;
   }
@@ -84,16 +83,6 @@ const { img, name, job, href1, href2, href3 } = Astro.props;
     transform: scale(1);
   }
 
-  @keyframes floatUp {
-    0% {
-      transform: translatey(30px);
-      opacity: 0;
-    }
-    100% {
-      transform: translatey(0px);
-      opacity: 1;
-    }
-  }
 
   .teamSectionCard:nth-child(1) {
     animation-delay: 0s;

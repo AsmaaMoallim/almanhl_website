@@ -10,24 +10,11 @@ export interface Props {
 const { icon, title, content, href, card_nav } = Astro.props;
 ---
 
-<!-- <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("contactCard__animation");
-        return;
-      }
-    });
-  });
-  observer.observe(document.querySelector(".contactCard"));
-</script> -->
-<div class="contactCard">
-  <!-- <div class="contactCard__animation"> -->
+<div class="contactCard hidden">
   <div class="card_icon"><i class={`bi bi-${icon}-fill`}></i></div>
   <div class="card_title"><h3>{title}</h3></div>
   <div class="card_content">{content}</div>
   <div class="card_nav"><a href={href}>{card_nav}</a></div>
-  <!-- </div> -->
 </div>
 
 <style>
@@ -40,9 +27,12 @@ const { icon, title, content, href, card_nav } = Astro.props;
     align-items: center;
     gap: 0.8rem;
     transform: translatey(20px);
-    animation: floatUp 0.8s linear forwards;
     opacity: 0;
   }
+
+  /* .animate {
+    animation: floatUp 0.8s linear forwards;
+  } */
 
   /* .contactCard__animation {
     animation: floatUp 0.8s linear forwards;
@@ -78,7 +68,7 @@ const { icon, title, content, href, card_nav } = Astro.props;
   .contactCard .card_nav:hover a {
     color: var(--fushina) !important;
   }
-
+/* 
   @keyframes floatUp {
     0% {
       transform: translatey(30px);
@@ -88,7 +78,7 @@ const { icon, title, content, href, card_nav } = Astro.props;
       transform: translatey(0px);
       opacity: 1;
     }
-  }
+  } */
 
   .contactCard:nth-child(1) {
     animation-delay: 0s;

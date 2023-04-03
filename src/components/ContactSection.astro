@@ -4,31 +4,31 @@ import ContactForm from "./ContactForm.astro";
 ---
 
 <main class="contactUs">
-  <h2 class="contactUs_title">Contact With Us</h2>
-  <span class="contactUs_content">
+  <h2 class="contactUs_title hidden" >Contact With Us</h2>
+  <span class="contactUs_content hidden" >
     For more information contact almanhl team
   </span>
   <div class="contactUs_cards">
-    <ContactCard
-      icon="geo-alt"
-      title="OUR ADDRESS"
-      content="4 Montgomery, NY 12549"
-      card_nav="VIEW MAP"
-    />
-    <ContactCard
-      icon="telephone"
-      title="OUR PHONE"
-      content="+23 0123 4567"
-      card_nav="CALL NOW"
-    />
-    <ContactCard
-      icon="envelope"
-      title="EMAIL-ID"
-      content="Yourmail@gmail.com"
-      card_nav="SEND A MESSAGE"
-    />
+      <ContactCard
+        icon="geo-alt"
+        title="OUR ADDRESS"
+        content="4 Montgomery, NY 12549"
+        card_nav="VIEW MAP"
+      />
+      <ContactCard
+        icon="telephone"
+        title="OUR PHONE"
+        content="+23 0123 4567"
+        card_nav="CALL NOW"
+      />
+      <ContactCard
+        icon="envelope"
+        title="EMAIL-ID"
+        content="Yourmail@gmail.com"
+        card_nav="SEND A MESSAGE"
+      />
   </div>
-  <ContactForm/>
+  <ContactForm />
 </main>
 
 <style>
@@ -49,12 +49,18 @@ import ContactForm from "./ContactForm.astro";
     color: var(--void) !important;
     font-weight: 300;
     font-size: 1.5rem;
-    opacity: 0.6;
   }
 
   .contactUs .contactUs_cards {
     display: flex;
     justify-content: center;
     padding: 2rem;
+  }
+  .card_bg:nth-child(odd) {
+    background-color: var(--jewel);
+  }
+
+  .card_bg:nth-child(even) {
+    background-color: var(--jewel-darker);
   }
 </style>

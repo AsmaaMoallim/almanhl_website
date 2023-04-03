@@ -3,14 +3,14 @@ import FaqSections from "./faqSections.vue";
 ---
 
 <main class="faqSection">
-  <h2 class="faqSection_title">Frequently Asked Questions</h2>
-  <div class="faqSection_content">
+  <h2 class="faqSection_title hidden"  >Frequently Asked Questions</h2>
+  <div class="faqSection_content hidden"  >
     Frequently asked questions (FAQ) or Questions and Answers (Q&A), are listed
     questions and answers, all supposed to be commonly asked in some context
   </div>
-  <div class="faqSection_sections" id="app">
+  <div class="faqSection_sections" >
     <FaqSections client:visible />
-  </div>
+  </div> 
 </main>
 
 <style>

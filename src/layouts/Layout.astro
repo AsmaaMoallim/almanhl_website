@@ -1,19 +1,23 @@
 ---
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 export interface Props {
   title: string;
 }
 const { title } = Astro.props;
 ---
 
+<script src="../scripts/scrollObserver.js"></script>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Almanhl</title>
   </head>
   <body>
 
@@ -49,7 +53,6 @@ const { title } = Astro.props;
   } */
   body {
     margin: 0;
-    overflow-x: hidden;
   }
   * {
     transition: 0.5s;
@@ -57,5 +60,21 @@ const { title } = Astro.props;
     color: var(--stark) !important;
   }
 
+   .floatUp {
+    animation: floatUp 0.8s linear forwards;
+  }
+  @keyframes floatUp {
+    0% {
+      transform: translatey(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatey(0px);
+      opacity: 1;
+    }
+  }
+  .hidden{
+    opacity: 0;
+  }
 </style>
  
