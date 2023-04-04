@@ -1,5 +1,5 @@
 <template >
-  <main :id="id" class="question">
+  <main :id="id" class="question hidden">
     <div class="question_header" @click="toggle_question">
       <div class="question_icon">
         <i class="bi bi-question-circle-fill"></i>
@@ -45,6 +45,7 @@ export default {
   },
 
 
+
   // watch: {
   //   'open'() {
   //     this.open = false;
@@ -56,6 +57,8 @@ export default {
 
 <style scoped>
 /* question */
+
+
 .question {
   width: 50rem;
   margin: auto;
@@ -63,6 +66,8 @@ export default {
   border-radius: 5px;
   border: 1.5px solid #4717f7;
   margin-bottom: .2rem;
+  animation: floatUp 0.8s linear forwards;
+
 }
 
 .question_header {

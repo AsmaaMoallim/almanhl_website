@@ -2,49 +2,53 @@
 import FormInput from "./FormInput.astro";
 ---
 
-<form method="post" name="enq" class="contactForm">
-  <div class="row" data-aos="fade-up">
+<form action="" method="post" name="enq" class="contactForm">
+  <div class="row">
     <FormInput
       input_type="text"
       required="required"
       placeholder="Enter Name *"
       id="first-name"
+      className="form-control hidden"
       name="name"
     />
     <FormInput
       input_type="email"
       required="required"
       placeholder="Enter Email *"
+      className="form-control hidden"
       id="email"
       name="email"
     />
   </div>
-  <div class="row" data-aos="fade-up">
+  <div class="row">
     <FormInput
       input_type="text"
       required="required"
       placeholder="Enter Subject"
       id="subject"
+      className="form-control hidden"
       name="subject"
     />
     <FormInput
       input_type="text"
       placeholder="Enter Phone No."
       id="phone"
+      className="form-control hidden"
       name="phone"
     />
-  </div>
-  <div class="row" data-aos="fade-up">
+  </div> 
+  <div class="row">
     <textarea
       required="required"
       placeholder="Message *"
       id="description"
-      class="form-control"
+      class="form-control-textArea hidden"
       name="message"
       rows="3"
       spellcheck="false"></textarea>
   </div>
-  <div class="row" data-aos="fade-up">
+  <div class="row btn_row hidden">
     <button
       type="submit"
       title="Submit Your Message!"
@@ -69,7 +73,7 @@ import FormInput from "./FormInput.astro";
     flex-direction: row;
     margin: 0 10.5rem;
   }
-  .form-control {
+  .form-control-textArea {
     width: 100%;
     height: 8rem;
     border-radius: 10px;
@@ -79,7 +83,7 @@ import FormInput from "./FormInput.astro";
     padding: 1rem;
     outline: none;
     color: var(--void) !important;
-  }
+  } 
   .btn {
     width: 100%;
     height: 4rem;

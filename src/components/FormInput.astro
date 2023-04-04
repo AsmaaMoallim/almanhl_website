@@ -4,10 +4,11 @@ export interface Props {
   required?: string;
   placeholder: string;
   id: string;
+  className: string;
   name: string;
 }
 
-const { input_type, required, placeholder, id, name } = Astro.props;
+const { input_type, required, placeholder, id, className, name } = Astro.props;
 ---
 
 <input
@@ -15,12 +16,12 @@ const { input_type, required, placeholder, id, name } = Astro.props;
   required={required}
   placeholder={placeholder}
   id={id}
-  class="form-control"
+  class={className}
   name={name}
 />
 
 <style>
-  .form-control {
+  .form-control { 
     width: 100%;
     height: 4rem;
     border-radius: 10px;
@@ -29,6 +30,17 @@ const { input_type, required, placeholder, id, name } = Astro.props;
     margin: 0.5rem;
     padding: 1rem;
     outline: none;
-    color: var(--void) !important; 
+    color: var(--void) !important;
+  }
+  .form-control_2 {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--stark);
+    margin: 0.5rem 0 ;
+    padding: 1rem;
+    outline: none;
+    color: var(--void) !important;
   }
 </style>

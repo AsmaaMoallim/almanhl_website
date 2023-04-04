@@ -8,8 +8,9 @@ export interface Props {
 const { icon, title, content } = Astro.props;
 ---
 
-<div class="WhyChooseUstSectionCard">
-  <div class="card_icon"><img src={`/images/wc_icon${icon}.png`} /></div>
+
+<div class="WhyChooseUstSectionCard hidden">
+  <div class="card_icon"><img src={`images/wc_icon${icon}.png`} /></div>
   <div class="card_title"><h3>{title}</h3></div>
   <div class="card_content">{content}</div>
 </div>
@@ -24,12 +25,17 @@ const { icon, title, content } = Astro.props;
     align-items: center;
     gap: 0.8rem;
     transform: translatey(20px);
-    animation: floatUp 0.8s linear forwards;
     opacity: 0;
     /* background-color: var(--stark); */
     padding: 0 1rem;
     box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
   }
+  /* .WhyChooseUstSectionCardAnimate {
+    animation: floatUp 0.8s linear forwards;
+  } */
+  /* .animate {
+    animation: floatUp 0.8s linear forwards;
+  } */
   .card_icon {
     width: 50px;
     height: 50px;
@@ -49,7 +55,7 @@ const { icon, title, content } = Astro.props;
     margin: 10px;
     color: var(--void) !important;
   }
-
+/* 
   @keyframes floatUp {
     0% {
       transform: translatey(30px);
@@ -59,7 +65,7 @@ const { icon, title, content } = Astro.props;
       transform: translatey(0px);
       opacity: 1;
     }
-  }
+  } */
 
   .WhyChooseUstSectionCard:nth-child(1) {
     animation-delay: 0s;

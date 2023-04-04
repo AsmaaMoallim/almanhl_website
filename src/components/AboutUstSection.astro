@@ -1,12 +1,11 @@
-
-<main class="aboutUstSection" data-aos="fade-up">
-  <div class="aboutUstSection_container">
-    <div class="aboutUstSection_image" data-aos="fade-up">
-      <img src="/images/logo.jpeg" alt="" />
+<main class="aboutUstSection">
+  <div class="aboutUstSection_container hidden">
+    <div class="aboutUstSection_image">
+      <img src="images/logo.jpeg" alt="" />
     </div>
-    <div class="aboutUstSection_body" data-aos="fade-up">
-      <h2 class="aboutUstSection_title" >About Almanhl</h2>
-      <div class="aboutUstSection_content" >
+    <div class="aboutUstSection_body">
+      <h2 class="aboutUstSection_title hidden">About Almanhl</h2>
+      <div class="aboutUstSection_content hidden">
         <p>
           Cryptocash is one of the most transformative technologies since the
           invention of the Internet. Cryptocash stands firmly in support of
@@ -26,11 +25,14 @@
           there isn't anything embarrassing hidden in the middle of text.
         </p>
       </div>
-      <div class="aboutUstSection_nav">
-        <span class="outter_circle"
-          ><i class="icon bi bi-caret-right-fill"></i><span class="inner_circle"
-          ></span>
-        </span><a href="#">LET'S START</a>
+      <div class="aboutUstSection_nav hidden">
+        <div class="aboutUstSection_nav_hover">
+          <span class="outter_circle"
+            ><i class="icon bi bi-caret-right-fill"></i><span class="inner_circle"
+            ></span>
+          </span>
+          <a href="#">LET'S START</a>
+        </div>
       </div>
     </div>
   </div>
@@ -42,7 +44,7 @@
     margin: 5% 0;
   }
   .aboutUstSection_container {
-    background-color: var(--fushina);
+    backgrhiddenound-color: var(--fushina);
     margin: 4rem;
     height: 40rem;
     border-radius: 5rem;
@@ -58,6 +60,7 @@
     padding: 4rem 0;
     box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
   }
+
   .aboutUstSection .aboutUstSection_image {
     width: 45%;
   }
@@ -82,11 +85,12 @@
     margin: auto;
   }
 
-  .aboutUstSection_nav {
+  .aboutUstSection_nav , .aboutUstSection_nav_hover{
     display: flex;
     justify-content: left;
     align-items: center;
     gap: 1rem;
+    width: auto;
   }
   .aboutUstSection .aboutUstSection_nav a {
     text-decoration: none;
@@ -95,7 +99,7 @@
   .aboutUstSection .aboutUstSection_nav:hover a {
     color: var(--void) !important;
   }
-  .aboutUstSection_nav:hover {
+  .aboutUstSection_nav:hover .aboutUstSection_nav_hover{
     transform: translate(20px);
   }
 

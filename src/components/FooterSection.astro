@@ -1,17 +1,127 @@
+---
+import FormInput from "./FormInput.astro";
+---
+
 <div class="footerSection">
-  <!-- later -->
+  <div class="column">
+    <h3>Almanahl</h3>
+    <p>
+      Cryptocash stands firmly in support of financial freedom and the liberty
+      that Bitcoin provides globally for anyone to voluntarily participate in a
+      permissionless
+    </p>
+    <div class="footer_icons">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Quick links</h3>
+    <ul>
+      <a href="#"><i class="bi bi-chevron-right"></i>Cryptocash ICO</a>
+      <a href="#"><i class="bi bi-chevron-right"></i>How It Works</a>
+      <a href="#"><i class="bi bi-chevron-right"></i>Tokens</a>
+      <a href="#"><i class="bi bi-chevron-right"></i>FAQ</a>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Additional Info</h3>
+    <p>Cryptocash ICO How It Works Tokens Roadmap FAQ</p>
+    <p>Cryptocash ICO How It Works Tokens Roadmap FAQ</p>
+  </div>
+  <div class="column">
+    <h3>SUBSCRIBE NEWSLETTER</h3>
+    <div>By subscribing to always update latest news from us.</div>
+    <div id="subscribe_input">
+      <FormInput
+        input_type="email"
+        required="required"
+        placeholder="Enter Email *"
+        id="email"
+        className="form-control_2"
+        name="email"
+      />
+    </div>
+    <button
+      type="submit"
+      title="Submit Your Message!"
+      class="btn"
+      id="submitButton"
+      name="submit"
+      value="Submit"
+    >
+      SUBSCRIBE
+    </button>
+  </div>
 </div>
 
 <style>
   .footerSection {
-    width: 100vw;
+    width: 100%;
     height: 400px;
     display: flex;
+    flex-grow: 1;
     margin: auto;
-    text-align: center;
+    text-align: left;
     justify-content: center;
-    flex-direction: column;
-    margin: 5% 0 0 0;
+    align-items: baseline;
+    flex-direction: row;
     background-image: linear-gradient(45deg, var(--jewel), var(--fushina));
+    gap: 1rem;
+    padding: 5rem;
+  }
+
+  .column {
+    width: 100%;
+    padding: 1rem;
+  }
+  .column:nth-child(2) {
+    width: 60%;
+  }
+  ul {
+    padding-left: 0%;
+  }
+  .btn {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 6px;
+    border: none;
+    margin: 0.5rem 0;
+    transition: all 0.5s ease-in;
+    background-image: linear-gradient(
+      to right,
+      var(--void),
+      var(--jewel),
+      var(--void)
+    );
+    padding: 0%;
+    background-position: 100% 200%;
+    background-size: 200%;
+  }
+
+  .btn:hover {
+    background-position: 0 100%;
+  }
+  .footer_icons {
+    font-size: 1.5rem;
+  }
+  .footer_icons a {
+    margin: 0 0.2rem;
+  }
+
+  .footerSection * {
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+  .column p {
+    margin: 0.5rem 0;
+  }
+  ul > * {
+    display: block;
+    text-decoration: none;
+  }
+  .footerSection .column > * {
+    opacity: 0;
   }
 </style>
