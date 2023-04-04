@@ -1,0 +1,33 @@
+---
+import LoginLayout from "../../layouts/LoginLayout.astro";
+---
+
+<!-- dashboard -->
+<LoginLayout title="users">
+  <div id="title">
+    <h1>login.</h1>
+    <p class="thin">Log in to your account.</p>
+  </div>
+  <form action="#" method="post">
+    <p>
+      <input
+        placeholder="username"
+        name="username"
+        type="text"
+        id="username"
+        class="field"
+      />
+    </p>
+    <p>
+      <input
+        placeholder="password"
+        name="password"
+        type="password"
+        id="password"
+        class="field"
+      />
+    </p>
+    <p><input value="submit" type="submit" /></p>
+  </form>
+  <small class="thin">Not a member yet? <a href="#">Sign in</a></small>
+</LoginLayout>
